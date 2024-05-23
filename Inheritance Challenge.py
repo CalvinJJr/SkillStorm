@@ -1,38 +1,36 @@
 # inheritance challenge
 class Person:
     # Instance variables
-    has_identity = True
-
-    if has_identity:
-        print("Hi, I'm a person.")
+    def __init__(self, greeting):
+        self.greeting = str("Hello!")
 
     def speaks(self):
         print("I'm off to do whatever!\n")
 
 
-person = Person()
-person.speaks()
+Ann = Person("Ann")
+print(Ann.greeting + " " + "I'm Ann!")
+Ann.speaks()
 
 
 class Customer(Person):
 
-    has_identity = False
-
     def speaks(self):
         print("I'm a customer, I'm spending money!\n")
 
+# Andy's rude, he doesn't inherit the greeting.
 
-customer = Customer()
-customer.speaks()
+
+Andy = Customer("Andy")
+Andy.speaks()
 
 
 class Developer(Person):
-
-    has_identity = True
 
     def speaks(self):
         print("I'm a developer, I'm off to code!\n")
 
 
-developer = Developer()
-developer.speaks()
+Jake = Developer("Jake")
+print(Jake.greeting + " " + "I'm Jake")
+Jake.speaks()
