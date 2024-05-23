@@ -5,6 +5,7 @@ numbersList = ["a", "b", "c", "d", "e"]
 nls = numbersList
 numbersList[:] = [random.randrange(10) for x in numbersList]
 
+# Python output
 for x in nls:
     print(x)
 
